@@ -1,0 +1,4 @@
+
+rootProject.name = 'GeoNames_DBImporter'
+include('app')
+project(":app").name = "GeoNames_DBImporter"

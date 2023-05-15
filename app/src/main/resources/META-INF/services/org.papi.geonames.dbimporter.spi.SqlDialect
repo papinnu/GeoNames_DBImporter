@@ -1,0 +1,2 @@
+org.papi.geonames.dbimporter.impl.MysqlSqlDialect
+org.papi.geonames.dbimporter.impl.PostgreSqlDialect
