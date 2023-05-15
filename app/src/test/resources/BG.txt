@@ -1,0 +1,134 @@
+BG	8500	Айтос / Ajtos	Бургас / Burgas	BGS	Айтос / Ajtos	BGS01		BGS01-00	42.7	27.25	4
+BG	8517	Зетьово / Zet'ovo	Бургас / Burgas	BGS	Айтос / Ajtos	BGS01	Зетьово / Zet'ovo	BGS01-02	42.75	27.2333	4
+BG	8518	Лясково / Ljaskovo	Бургас / Burgas	BGS	Айтос / Ajtos	BGS01		BGS01-00	42.7333	27.3	4
+BG	8519	Малка поляна / Malka poljana	Бургас / Burgas	BGS	Айтос / Ajtos	BGS01	Малка поляна / Malka poljana	BGS01-06	42.6333	27.2333	4
+BG	8522	Съдиево / Sudievo	Бургас / Burgas	BGS	Айтос / Ajtos	BGS01	Съдиево / Sudievo	BGS01-12	42.6667	27.3167	4
+BG	8520	Българово / Bulgarovo	Бургас / Burgas	BGS	Бургас / Burgas	BGS04	Българово / Bulgarovo	BGS04-04	42.6167	27.3	4
+BG	8521	Миролюбово / Miroljubovo	Бургас / Burgas	BGS	Бургас / Burgas	BGS04		BGS04-00	42.6917	27.3	
+BG	8300	Средец / Sredec	Бургас / Burgas	BGS	Средец / Sredec	BGS06		BGS06-00	42.3489	27.1942	4
+BG	8534	Сини рид / Sini rid	Бургас / Burgas	BGS	Руен / Ruen	BGS18	Сини рид / Sini rid	BGS18-34	42.8167	27.4333	4
+BG	8535	Подгорец / Podgorec	Бургас / Burgas	BGS	Руен / Ruen	BGS18	Подгорец / Podgorec	BGS18-04	42.8333	27.4	4
+BG	2788	Кузьово / Kuz'ovo	Благоевград / Blagoevgrad	BLG	Белица / Belica	BLG02	Кузьово / Kuz'ovo	BLG02-07	41.95	23.6833	4
+BG	2789	Гълъбово / Gulubovo	Благоевград / Blagoevgrad	BLG	Белица / Belica	BLG02		BLG02-00	41.9667	23.6667	4
+BG	2791	Лютово / Ljutovo	Благоевград / Blagoevgrad	BLG	Белица / Belica	BLG02		BLG02-00	41.95	23.6333	4
+BG	2700	Благоевград / Blagoevgrad	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	23.1	4
+BG	2708	Покровник / Pokrovnik	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Покровник / Pokrovnik	BLG03-18	41.9833	23.05	4
+BG	2709	Бело поле / Belo pole	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Бело поле / Belo pole	BLG03-02	42.0333	23.0333	4
+BG	2710	Рилци / Rilci	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Рилци / Rilci	BLG03-19	41.9833	23.1333	4
+BG	2711	Изгрев / Izgrev	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Изгрев / Izgrev	BLG03-01	41.9833	23.1333	
+BG	2722	Церово / Cerovo	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Церово / Cerovo	BLG03-22	41.9667	23.1333	4
+BG	2723	Дъбрава / Dubrava	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.05	23.1167	4
+BG	2724	Бистрица / Bistrica	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.05	23.1833	4
+BG	2725	Марулево / Marulevo	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	41.9833	23.15	4
+BG	2726	Еленово / Elenovo	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	23.1	4
+BG	2727	Горно Хърсово / Gorno Khursovo	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	23.1	4
+BG	2728	Делвино / Delvino	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	23.1333	4
+BG	2729	Мощанец / Moshhanec	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	41.9667	23.0667	4
+BG	2737	Логодаж / Logodazh	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03	Логодаж / Logodazh	BLG03-21	41.9892	22.9361	4
+BG	2738	Обел / Obel	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	41.95	22.9	4
+BG	2738	Клисура / Klisura	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	22.9167	4
+BG	2739	Дренково / Drenkovo	Благоевград / Blagoevgrad	BLG	Благоевград / Blagoevgrad	BLG03		BLG03-00	42.0167	22.9167	4
+BG	2854	Стара Кресна / Stara Kresna	Благоевград / Blagoevgrad	BLG	Кресна / Kresna	BLG28		BLG28-00	41.8	23.1833	4
+BG	2850	Богородица / Bogorodica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4	23.2167	
+BG	2850	Петрич / Petrich	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4	23.2167	4
+BG	2856	Ръждак / Ruzhdak	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Ръждак / Ruzhdak	BLG33-36	41.4	23.25	4
+BG	2857	Митино / Mitino	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Митино / Mitino	BLG33-28	41.4333	23.25	4
+BG	2858	Тополница / Topolnica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Тополница / Topolnica	BLG33-42	41.4	23.3167	4
+BG	2859	Дрангово / Drangovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Дрангово / Drangovo	BLG33-13	41.4167	23.2833	4
+BG	2860	Кърналово / Kurnalovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Кърналово / Kurnalovo	BLG33-24	41.4667	23.2167	4
+BG	2861	Старчево / Starchevo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Старчево / Starchevo	BLG33-40	41.4833	23.2333	4
+BG	2862	Михнево / Mikhnevo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Михнево / Mikhnevo	BLG33-29	41.45	23.2	4
+BG	2863	Рупите / Rupite	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Рупите / Rupite	BLG33-30	41.4333	23.25	4
+BG	2864	Рибник / Ribnik	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4833	23.25	4
+BG	2865	Чучулигово / Chuchuligovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Чучулигово / Chuchuligovo	BLG33-45	41.4	23.35	4
+BG	2867	Марино поле / Marino pole	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Марино поле / Marino pole	BLG33-26	41.4167	23.35	4
+BG	2868	Кулата / Kulata	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Кулата / Kulata	BLG33-23	41.3833	23.3667	4
+BG	2869	Долно Спанчево / Dolno Spanchevo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4167	23.3833	4
+BG	2870	Марикостиново / Marikostinovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Марикостиново / Marikostinovo	BLG33-25	41.4333	23.35	4
+BG	2871	Кромидово / Kromidovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.45	23.3667	4
+BG	2872	Капатово / Kapatovo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4667	23.3667	4
+BG	2873	Генерал Тодоров / General Todorov	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Генерал Тодоров / General Todorov	BLG33-33	41.4774	23.1798	
+BG	2874	Ново Кономлади / Novo Konomladi	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.45	23.3333	4
+BG	2875	Тонско дабе / Tonsko dabe	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.5	23.1333	4
+BG	2875	Крънджилица / Krundzhilica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.55	23.0667	4
+BG	2875	Гюргево / Gjurgevo	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4833	23.15	4
+BG	2895	Вишлене / Vishlene	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4333	23.0667	4
+BG	2895	Струмешница / Strumeshnica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Струмешница / Strumeshnica	BLG33-41	41.4167	23.0167	4
+BG	2895	Кладенци / Kladenci	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Струмешница / Strumeshnica	BLG33-41	41.4167	23.05	4
+BG	2895	Дреновица / Drenovica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.4333	23.1	4
+BG	2895	Самуилова крепост / Samuilova krepost	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33		BLG33-00	41.3667	23	4
+BG	2896	Яворница / Javornica	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Яворница / Javornica	BLG33-46	41.3667	23.05	4
+BG	2897	Скрът / Skrut	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Скрът / Skrut	BLG33-39	41.3617	22.9975	4
+BG	2898	Габрене / Gabrene	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Габрене / Gabrene	BLG33-06	41.3656	22.9711	4
+BG	2899	Ключ / Kljuch	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Ключ / Kljuch	BLG33-19	41.3667	23.0167	4
+BG	4270	Първомай / Purvomaj	Благоевград / Blagoevgrad	BLG	Петрич / Petrich	BLG33	Първомай / Purvomaj	BLG33-34	42.1	25.2167	4
+BG	2760	Разлог / Razlog	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37		BLG37-00	41.8903	23.4792	4
+BG	2768	Годлево / Godlevo	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Годлево / Godlevo	BLG37-03	41.9333	23.4833	4
+BG	2769	Бачево / Bachevo	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Бачево / Bachevo	BLG37-02	41.9167	23.45	4
+BG	2778	Баня / Banja	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Баня / Banja	BLG37-01	41.8833	23.5333	4
+BG	2782	Елешница / Eleshnica	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Елешница / Eleshnica	BLG37-07	41.8667	23.6167	4
+BG	2797	Горно Драглище / Gorno Draglishhe	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Горно Драглище / Gorno Draglishhe	BLG37-04	41.95	23.5167	4
+BG	2798	Долно Драглище / Dolno Draglishhe	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Долно Драглище / Dolno Draglishhe	BLG37-06	41.9333	23.5167	4
+BG	2799	Добърско / Dobursko	Благоевград / Blagoevgrad	BLG	Разлог / Razlog	BLG37	Добърско / Dobursko	BLG37-05	41.9667	23.4833	4
+BG	2800	Белевехчево / Belevekhchevo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5667	23.3167	4
+BG	2800	Малки Цалим / Malki Calim	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.6	23.35	4
+BG	2800	Сандански / Sandanski	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5667	23.2833	4
+BG	2800	Вихрен / Vikhren	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.6167	23.3333	4
+BG	2800	Стожа / Stozha	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Лиляново / Liljanovo	BLG40-24	41.6167	23.3167	4
+BG	2800	Голем Цалим / Golem Calim	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.6	23.3333	4
+BG	2803	Дебрене / Debrene	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5833	23.3167	4
+BG	2804	Поленица / Polenica	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Поленица / Polenica	BLG40-35	41.5667	23.3	4
+BG	2805	Кръстилци / Krustilci	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.55	23.2	4
+BG	2806	Струма / Struma	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Струма / Struma	BLG40-39	41.55	23.2333	4
+BG	2807	Вълково / Vulkovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Вълково / Vulkovo	BLG40-04	41.5833	23.2167	4
+BG	2808	Лешница / Leshnica	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Лешница / Leshnica	BLG40-23	41.5333	23.2833	4
+BG	2809	Лиляново / Liljanovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Лиляново / Liljanovo	BLG40-24	41.6167	23.3167	4
+BG	2810	Плоски / Ploski	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Плоски / Ploski	BLG40-34	41.65	23.2667	4
+BG	2811	Любовка / Ljubovka	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5833	23.3667	4
+BG	2811	Ласкарево / Laskarevo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Ласкарево / Laskarevo	BLG40-19	41.5333	23.3333	4
+BG	2811	Горна Сушица / Gorna Sushica	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.55	23.3833	4
+BG	2811	Ладарево / Ladarevo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.55	23.35	4
+BG	2811	Долени / Doleni	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5667	23.4167	4
+BG	2811	Бождово / Bozhdovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.6	23.3667	4
+BG	2811	Спатово / Spatovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5	23.3333	4
+BG	2811	Склаве / Sklave	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Склаве / Sklave	BLG40-37	41.5167	23.3167	4
+BG	2812	Джигурово / Dzhigurovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Джигурово / Dzhigurovo	BLG40-10	41.55	23.3167	4
+BG	2813	Дамяница / Damjanica	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Дамяница / Damjanica	BLG40-08	41.5167	23.2667	4
+BG	2814	Ново Делчево / Novo Delchevo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Ново Делчево / Novo Delchevo	BLG40-29	41.5	23.2833	4
+BG	2815	Петрово / Petrovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Петрово / Petrovo	BLG40-31	41.4333	23.5167	4
+BG	2816	Лехово / Lekhovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.4167	23.4833	4
+BG	2816	Яново / Janovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.4333	23.4833	4
+BG	2817	Левуново / Levunovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Левуново / Levunovo	BLG40-21	41.4833	23.3	4
+BG	2818	Голешово / Goleshovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.4333	23.6	4
+BG	2819	Хърсово / Khursovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Хърсово / Khursovo	BLG40-42	41.4667	23.3833	4
+BG	2820	Любовище / Ljubovishhe	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.5333	23.45	4
+BG	2820	Кърланово / Kurlanovo	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40		BLG40-00	41.55	23.4167	4
+BG	2820	Мелник / Melnik	Благоевград / Blagoevgrad	BLG	Сандански / Sandanski	BLG40	Мелник / Melnik	BLG40-28	41.5167	23.4	4
+BG	9616	Бобовец / Bobovec	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03		DOB03-00	43.4333	28.0833	4
+BG	9617	Ляхово / Ljakhovo	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Ляхово / Ljakhovo	DOB03-09	43.4167	28.05	4
+BG	9618	Храброво / Khrabrovo	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03		DOB03-00	43.4333	28.0167	4
+BG	9619	Карвуна / Karvuna	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Сенокос / Senokos	DOB03-14	43.4667	28.0167	4
+BG	9630	Оброчище / Obrochishhe	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Оброчище / Obrochishhe	DOB03-11	43.4	28.05	4
+BG	9631	Църква / Curkva	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Църква / Curkva	DOB03-19	43.4167	28.0167	4
+BG	9632	Рогачево / Rogachevo	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03		DOB03-00	43.3833	28.0167	4
+BG	9634	Сенокос / Senokos	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Сенокос / Senokos	DOB03-14	43.5167	28.0167	4
+BG	9635	Преспа / Prespa	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03		DOB03-00	43.55	28.0333	4
+BG	9637	Безводица / Bezvodica	Добрич / Dobrich	DOB	Балчик / Balchik	DOB03	Безводица / Bezvodica	DOB03-01	43.5167	27.9667	4
+BG	5166	Водно / Vodno	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31		VTR31-00	43.1333	26.0333	4
+BG	5167	Горски Сеновец / Gorski Senovec	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Горски Сеновец / Gorski Senovec	VTR31-07	43.2833	25.9	4
+BG	5168	Николаево / Nikolaevo	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31		VTR31-00	43.3167	25.9833	4
+BG	5169	Нова Върбовка / Nova Vurbovka	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Нова Върбовка / Nova Vurbovka	VTR31-14	43.3333	25.9333	4
+BG	5171	Виноград / Vinograd	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Виноград / Vinograd	VTR31-05	43.3333	25.8333	4
+BG	5172	Лозен / Lozen	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Лозен / Lozen	VTR31-11	43.3333	25.8833	4
+BG	5174	Царски извор / Carski izvor	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Царски извор / Carski izvor	VTR31-19	43.2407	25.9333	
+BG	5175	Ново градище / Novo gradishhe	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31		VTR31-00	43.2	26.0667	4
+BG	5176	Любенци / Ljubenci	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31		VTR31-00	43.2	26.1	4
+BG	5177	Сушица / Sushica	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Сушица / Sushica	VTR31-17	43.2667	25.8167	4
+BG	5178	Благоево / Blagoevo	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Благоево / Blagoevo	VTR31-03	43.2	25.9667	4
+BG	5179	Владислав / Vladislav	Велико Търново / Veliko Turnovo	VTR	Стражица / Strazhica	VTR31	Владислав / Vladislav	VTR31-06	43.1833	26	4
+BG	5235	Горско Косово / Gorsko Kosovo	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.1167	25.1667	4
+BG	5237	Бяла река / Bjala reka	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.1333	25.2	4
+BG	5238	Горско Калугерово / Gorsko Kalugerovo	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.1167	25.2333	4
+BG	5240	Сухиндол / Sukhindol	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.1917	25.1811	4
+BG	5241	Коевци / Koevci	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.15	25.1167	4
+BG	5242	Красно градище / Krasno gradishhe	Велико Търново / Veliko Turnovo	VTR	Сухиндол / Sukhindol	VTR32		VTR32-00	43.2	25.2167	4

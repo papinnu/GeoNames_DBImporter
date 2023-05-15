@@ -1,10 +1,12 @@
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
     id 'application'
+    id 'io.freefair.lombok' version '6.1.0'
+    id 'com.adarshr.test-logger' version "3.2.0"
 }
 
-java.targetCompatibility = JavaVersion.VERSION_17
 java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -12,11 +14,25 @@ repositories {
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.1")
 
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
+    testImplementation 'mysql:mysql-connector-java:8.0.33'
+    testImplementation 'org.postgresql:postgresql:42.6.0'
+
+    testImplementation 'org.testcontainers:testcontainers-bom:1.18.1'
+    testImplementation "org.testcontainers:junit-jupiter:1.18.1"
+    testImplementation 'org.testcontainers:postgresql:1.18.1'
+    testImplementation 'org.testcontainers:mysql:1.18.1'
+
+}
+
+applicationDistribution.from( "$projectDir" ) {
+    include "*.md"
 }
 
 application {
@@ -24,7 +40,13 @@ application {
     mainClass = 'org.papi.geonames.dbimporter.App'
 }
 
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
+test {
     useJUnitPlatform()
+    testlogger {
+        theme 'mocha' // project level
+        slowThreshold 500
+        showSimpleNames true
+        showStandardStreams true
+        logLevel 'lifecycle'
+    }
 }

@@ -1,0 +1,116 @@
+US	99553	Akutan	Alaska	AK	Aleutians East	013			54.143	-165.7854	1
+US	99571	Cold Bay	Alaska	AK	Aleutians East	013			55.1858	-162.7211	1
+US	99583	False Pass	Alaska	AK	Aleutians East	013			54.8542	-163.4113	1
+US	99612	King Cove	Alaska	AK	Aleutians East	013			55.0628	-162.3056	1
+US	99661	Sand Point	Alaska	AK	Aleutians East	013			55.3192	-160.4914	1
+US	99546	Adak	Alaska	AK	Aleutians West (CA)	016			51.874	-176.634	1
+US	99547	Atka	Alaska	AK	Aleutians West (CA)	016			52.1961	-174.2006	1
+US	99591	Saint George Island	Alaska	AK	Aleutians West (CA)	016			56.5944	-169.6186	1
+US	99638	Nikolski	Alaska	AK	Aleutians West (CA)	016			52.9381	-168.8678	1
+US	99660	Saint Paul Island	Alaska	AK	Aleutians West (CA)	016			57.1842	-170.2764	1
+US	99685	Unalaska	Alaska	AK	Aleutians West (CA)	016			53.8871	-166.5199	1
+US	99692	Dutch Harbor	Alaska	AK	Aleutians West (CA)	016			53.8898	-166.5422	1
+US	99501	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2116	-149.8761	1
+US	99502	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1661	-149.96	1
+US	99503	Anchorage	Alaska	AK	Anchorage Municipality	020			61.19	-149.8938	1
+US	99504	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2037	-149.7447	1
+US	99505	Jber	Alaska	AK	Anchorage Municipality	020			59.8666	-158.5996	1
+US	99506	Jber	Alaska	AK	Anchorage Municipality	020			59.8666	-158.5996	1
+US	99507	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1535	-149.8289	1
+US	99508	Anchorage	Alaska	AK	Anchorage Municipality	020			61.206	-149.8101	1
+US	99509	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99510	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1446	-149.8784	1
+US	99511	Anchorage	Alaska	AK	Anchorage Municipality	020			61.0683	-149.8005	1
+US	99513	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2149	-149.8862	1
+US	99514	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99515	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1194	-149.8974	1
+US	99516	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1054	-149.78	1
+US	99517	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1901	-149.9361	1
+US	99518	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1549	-149.8866	1
+US	99519	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1089	-149.4403	1
+US	99520	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99521	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99522	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99523	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99524	Anchorage	Alaska	AK	Anchorage Municipality	020			61.2181	-149.9003	1
+US	99529	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1515	-149.9443	1
+US	99530	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1515	-149.9443	1
+US	99540	Indian	Alaska	AK	Anchorage Municipality	020			61.1089	-149.4403	1
+US	99567	Chugiak	Alaska	AK	Anchorage Municipality	020			61.4098	-149.4537	1
+US	99577	Eagle River	Alaska	AK	Anchorage Municipality	020			61.3114	-149.5085	1
+US	99587	Girdwood	Alaska	AK	Anchorage Municipality	020			60.9577	-149.1406	1
+US	99599	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1872	-149.8804	1
+US	99695	Anchorage	Alaska	AK	Anchorage Municipality	020			61.1089	-149.4403	1
+US	99545	Kongiganak	Alaska	AK	Bethel Census Area	050			59.9599	-162.8919	1
+US	99551	Akiachak	Alaska	AK	Bethel Census Area	050			60.9094	-161.4314	4
+US	99552	Akiak	Alaska	AK	Bethel Census Area	050			60.9122	-161.2139	4
+US	99557	Aniak	Alaska	AK	Bethel Census Area	050			61.5783	-159.5222	4
+US	99559	Bethel	Alaska	AK	Bethel Census Area	050			60.7922	-161.7558	4
+US	47574	Rome	Indiana	IN	Perry	123			37.9372	-86.534	4
+US	47576	Saint Croix	Indiana	IN	Perry	123			38.1834	-86.6058	4
+US	47586	Tell City	Indiana	IN	Perry	123			37.9655	-86.7457	4
+US	47564	Otwell	Indiana	IN	Pike	125			38.4662	-87.0985	4
+US	47567	Petersburg	Indiana	IN	Pike	125			38.4789	-87.2883	4
+US	47584	Spurgeon	Indiana	IN	Pike	125			38.2523	-87.2572	4
+US	47585	Stendal	Indiana	IN	Pike	125			38.2835	-87.1205	4
+US	47590	Velpen	Indiana	IN	Pike	125			38.368	-87.099	4
+US	47598	Winslow	Indiana	IN	Pike	125			38.364	-87.2223	4
+US	46301	Beverly Shores	Indiana	IN	Porter	127			41.6925	-86.9775	4
+US	46302	Boone Grove	Indiana	IN	Porter	127			41.3542	-87.1304	4
+US	46304	Chesterton	Indiana	IN	Porter	127			41.6143	-87.047	4
+US	46341	Hebron	Indiana	IN	Porter	127			41.3155	-87.2088	4
+US	46347	Kouts	Indiana	IN	Porter	127			41.3091	-87.024	4
+US	46368	Portage	Indiana	IN	Porter	127			41.5672	-87.1757	4
+US	46383	Valparaiso	Indiana	IN	Porter	127			41.4547	-87.0656	4
+US	46384	Valparaiso	Indiana	IN	Porter	127			41.4905	-87.0761	4
+US	46385	Valparaiso	Indiana	IN	Porter	127			41.4706	-87.0783	4
+US	46393	Wheeler	Indiana	IN	Porter	127			41.5116	-87.1792	4
+US	47612	Cynthiana	Indiana	IN	Posey	129			38.193	-87.6992	4
+US	47616	Griffin	Indiana	IN	Posey	129			38.2069	-87.9166	4
+US	47620	Mount Vernon	Indiana	IN	Posey	129			37.9506	-87.8569	4
+US	47631	New Harmony	Indiana	IN	Posey	129			38.1245	-87.9172	4
+US	47633	Poseyville	Indiana	IN	Posey	129			38.172	-87.8027	4
+US	47638	Wadesville	Indiana	IN	Posey	129			38.0828	-87.7543	4
+US	46960	Monterey	Indiana	IN	Pulaski	131			41.1383	-86.5179	4
+US	46985	Star City	Indiana	IN	Pulaski	131			40.9602	-86.5404	4
+US	46996	Winamac	Indiana	IN	Pulaski	131			41.0562	-86.6307	4
+US	47946	Francesville	Indiana	IN	Pulaski	131			40.9709	-86.8553	4
+US	47957	Medaryville	Indiana	IN	Pulaski	131			41.0897	-86.8808	4
+US	46105	Bainbridge	Indiana	IN	Putnam	133			39.7612	-86.812	4
+US	46120	Cloverdale	Indiana	IN	Putnam	133			39.5148	-86.7939	4
+US	46128	Fillmore	Indiana	IN	Putnam	133			39.6475	-86.7469	4
+US	46135	Greencastle	Indiana	IN	Putnam	133			39.6495	-86.8686	4
+US	46170	Putnamville	Indiana	IN	Putnam	133			39.5742	-86.8653	4
+US	46171	Reelsville	Indiana	IN	Putnam	133			39.5464	-86.95	4
+US	46172	Roachdale	Indiana	IN	Putnam	133			39.8325	-86.7902	4
+US	46175	Russellville	Indiana	IN	Putnam	133			39.8366	-86.967	4
+US	70577	Port Barre	Louisiana	LA	St. Landry	097			30.5478	-91.9286	4
+US	70584	Sunset	Louisiana	LA	St. Landry	097			30.3884	-92.0934	4
+US	70589	Washington	Louisiana	LA	St. Landry	097			30.6839	-92.0252	4
+US	70750	Krotz Springs	Louisiana	LA	St. Landry	097			30.5379	-91.7563	4
+US	71345	Lebeau	Louisiana	LA	St. Landry	097			30.7292	-91.9755	4
+US	71353	Melville	Louisiana	LA	St. Landry	097			30.6626	-91.7565	4
+US	71356	Morrow	Louisiana	LA	St. Landry	097			30.8299	-92.0426	4
+US	71358	Palmetto	Louisiana	LA	St. Landry	097			30.7065	-91.9114	4
+US	70517	Breaux Bridge	Louisiana	LA	St. Martin	099			30.2948	-91.8296	4
+US	70519	Cade	Louisiana	LA	St. Martin	099			30.0797	-91.9114	4
+US	70521	Cecilia	Louisiana	LA	St. Martin	099			30.3364	-91.8492	4
+US	70582	Saint Martinville	Louisiana	LA	St. Martin	099			30.2237	-91.7794	4
+US	70340	Amelia	Louisiana	LA	St. Mary	101			29.6663	-91.102	4
+US	70342	Berwick	Louisiana	LA	St. Mary	101			29.6929	-91.2518	4
+US	70380	Morgan City	Louisiana	LA	St. Mary	101			29.6977	-91.2654	4
+US	70381	Morgan City	Louisiana	LA	St. Mary	101			29.6946	-91.2593	4
+US	70392	Patterson	Louisiana	LA	St. Mary	101			29.6967	-91.2812	4
+US	70514	Baldwin	Louisiana	LA	St. Mary	101			29.8488	-91.5458	4
+US	70522	Centerville	Louisiana	LA	St. Mary	101			29.7523	-91.4397	4
+US	70523	Charenton	Louisiana	LA	St. Mary	101			29.8796	-91.5337	4
+US	70538	Franklin	Louisiana	LA	St. Mary	101			29.7857	-91.5026	4
+US	70540	Garden City	Louisiana	LA	St. Mary	101			29.7633	-91.467	4
+US	70420	Abita Springs	Louisiana	LA	St. Tammany	103			30.4837	-90.0041	4
+US	70431	Bush	Louisiana	LA	St. Tammany	103			30.6134	-89.9557	4
+US	70433	Covington	Louisiana	LA	St. Tammany	103			30.4876	-90.0959	4
+US	70434	Covington	Louisiana	LA	St. Tammany	103			30.4755	-90.1004	4
+US	70435	Covington	Louisiana	LA	St. Tammany	103			30.5661	-90.1098	4
+US	70437	Folsom	Louisiana	LA	St. Tammany	103			30.6145	-90.1879	4
+US	70445	Lacombe	Louisiana	LA	St. Tammany	103			30.322	-89.9297	4
+US	70447	Madisonville	Louisiana	LA	St. Tammany	103			30.4287	-90.1773	4
