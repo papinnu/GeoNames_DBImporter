@@ -17,6 +17,6 @@ public class City extends Place {
     }
 
     private int stateId;
-    private int countryId;
+    private int countyId;
 
 }

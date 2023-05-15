@@ -6,8 +6,8 @@ package org.papi.geonames.dbimporter.api;
 public enum PlaceType {
 
     STATE("states", null, "code", "name"),
-    COUNTRY("countries", "stateId", "code", "name"),
-    COMMUNITY("communities", "countryId", "code", "name"),
+    COUNTY("counties", "stateId", "code", "name"),
+    COMMUNITY("communities", "countyId", "code", "name"),
     CITY("cities", "communityId", "postalCode", "name"),
     ;
 

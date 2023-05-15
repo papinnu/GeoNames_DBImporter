@@ -26,7 +26,7 @@ public class CityDataStructureBuilder {
     private String fileName;
     private SqlDialect sqlDialect = null;
     private final Map<String, Place> states = new HashMap<>();
-    private final Map<String, Place> countries = new HashMap<>();
+    private final Map<String, Place> counties = new HashMap<>();
     private final Map<String, Place> communities = new HashMap<>();
     private final Map<String, City> cities = new HashMap<>();
 
@@ -72,7 +72,7 @@ public class CityDataStructureBuilder {
         }
         try (BufferedWriter writer = Files.newBufferedWriter(filePath)) {
             writePlacesTable(PlaceType.STATE, states, writer);
-            writePlacesTable(PlaceType.COUNTRY, countries, writer);
+            writePlacesTable(PlaceType.COUNTY, counties, writer);
             writePlacesTable(PlaceType.COMMUNITY, communities, writer);
             writeCitiesTable(cities, writer);
         } catch (IOException e) {
@@ -109,14 +109,14 @@ public class CityDataStructureBuilder {
             }
             city.setStateId(state.getId());
 
-            Place country = countries.get(tokens[6]);
-            if (country == null) {
-                country = new Place(PlaceType.COUNTRY, tokens[6], tokens[5]);
-                country.setId(countries.size() + 1);
-                country.setParent(state);
-                countries.put(country.getCode(), country);
+            Place county = counties.get(tokens[6]);
+            if (county == null) {
+                county = new Place(PlaceType.COUNTY, tokens[6], tokens[5]);
+                county.setId(counties.size() + 1);
+                county.setParent(state);
+                counties.put(county.getCode(), county);
             }
-            city.setCountryId(country.getId());
+            city.setCountyId(county.getId());
 
             if (!tokens[8].isBlank() && tokens[7].isBlank()) {
                 Place community = communities.get(tokens[8]);
@@ -124,7 +124,7 @@ public class CityDataStructureBuilder {
                     try {
                         community = new Place(PlaceType.COMMUNITY, tokens[8], tokens[7]);
                         community.setId(communities.size() + 1);
-                        community.setParent(country);
+                        community.setParent(county);
                         communities.put(community.getCode(), community);
                     } catch (IllegalArgumentException ex) {
                         // skip community - can be NULL
@@ -186,7 +186,7 @@ public class CityDataStructureBuilder {
                 placeType.getNameColumn(),
                 place.getId(),
                 ((City) place).getStateId(),
-                ((City) place).getCountryId(),
+                ((City) place).getCountyId(),
                 place.getParent() == null ? null : place.getParent().getId(),
                 place.getCode(),
                 place.getName()));

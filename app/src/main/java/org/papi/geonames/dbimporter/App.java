@@ -26,7 +26,7 @@ public class App {
             PlaceType.STATE.setTableName(args[3]);
         }
         if(args.length > 4) {
-            PlaceType.COUNTRY.setTableName(args[4]);
+            PlaceType.COUNTY.setTableName(args[4]);
         }
         if(args.length > 5) {
             PlaceType.COMMUNITY.setTableName(args[5]);
