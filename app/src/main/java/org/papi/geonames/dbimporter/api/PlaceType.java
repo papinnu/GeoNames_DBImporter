@@ -27,10 +27,6 @@ public enum PlaceType {
         this.tableName = tableName;
     }
 
-//    public void setParentColumn(String parentColumn) {
-//        this.parentColumn = parentColumn;
-//    }
-
     public String getTableName() {
         return tableName;
     }
