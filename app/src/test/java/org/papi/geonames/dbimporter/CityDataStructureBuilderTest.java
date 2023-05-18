@@ -9,18 +9,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.sql.DataSource;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.junit.jupiter.api.Test;
 import org.papi.geonames.dbimporter.testcontainers.TestMySQLContainer;
 import org.papi.geonames.dbimporter.testcontainers.TestPostgreSqlContainer;
 import org.testcontainers.containers.Container.ExecResult;
+import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.utility.MountableFile;
@@ -62,14 +64,14 @@ class CityDataStructureBuilderTest {
         }
 
         // Test MySQL imported data
-        try (Connection conn = getMySqlConnection()) {
+        try (Connection conn = getConnection(mysqlContainer)) {
             PreparedStatement pstmt = conn.prepareStatement("SELECT COUNT(*) FROM states WHERE code=?");
             pstmt.setString(1, "LA");
             ResultSet res = pstmt.executeQuery();
             if (res.next()) {
                 assertEquals(1, res.getInt(1));
             } else {
-                fail("Error MySQL test.");
+                fail("Error MySQL test: There is no state in the database with code 'LA'.");
             }
 
             pstmt = conn.prepareStatement("SELECT COUNT(*) FROM cities WHERE postalCode=?");
@@ -78,11 +80,10 @@ class CityDataStructureBuilderTest {
             if (res.next()) {
                 assertEquals(1, res.getInt(1));
             } else {
-                fail("Error MySQL test.");
+                fail("Error MySQL test: There is no city in the database with postal code '46105'.");
             }
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(CityDataStructureBuilderTest.class.getName()).log(Level.SEVERE, null, ex);
-            fail("Error MySQL test.");
             fail("Error MySQL test.");
         }
 
@@ -114,14 +115,14 @@ class CityDataStructureBuilderTest {
         }
 
         // Test PostgreSql imported data
-        try (Connection conn = getPostgreSqlConnection()) {
+        try (Connection conn = getConnection(postgresqlContainer)) {
             PreparedStatement pstmt = conn.prepareStatement("SELECT COUNT(*) FROM states WHERE code=?");
             pstmt.setString(1, "BGS");
             ResultSet res = pstmt.executeQuery();
             if (res.next()) {
                 assertEquals(1, res.getInt(1));
             } else {
-                fail("Error PostgreSQL test.");
+                fail("Error PostgreSQL test: There is no state in the database with code 'BGS'.");
             }
 
             pstmt = conn.prepareStatement("SELECT COUNT(*) FROM cities WHERE postalCode=?");
@@ -130,35 +131,27 @@ class CityDataStructureBuilderTest {
             if (res.next()) {
                 assertEquals(1, res.getInt(1));
             } else {
-                fail("Error PostgreSQL test.");
+                fail("Error PostgreSQL test: There is no city in the database with postal code '2873'.");
             }
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(CityDataStructureBuilderTest.class.getName()).log(Level.SEVERE, null, ex);
-            fail("Error PostgreSQL test.");
             fail("Error PostgreSQL test.");
         }
 
         postgresqlContainer.stop();
     }
 
-    private Connection getMySqlConnection() throws ClassNotFoundException, SQLException {
-        String DATABASE_DRIVER = "com.mysql.cj.jdbc.Driver";
-        String DATABASE_URL = "jdbc:mysql://localhost:%1$d/geonames".formatted(mysqlContainer.getFirstMappedPort());
-        Properties properties = new Properties();
-        properties.setProperty("user", mysqlContainer.getUsername());
-        properties.setProperty("password", mysqlContainer.getPassword());
-        Class.forName(DATABASE_DRIVER);
-        return DriverManager.getConnection(DATABASE_URL, properties);
+    public Connection getConnection(JdbcDatabaseContainer<?> container) throws SQLException {
+        return getDataSource(container).getConnection();
     }
 
-    private Connection getPostgreSqlConnection() throws ClassNotFoundException, SQLException {
-        String DATABASE_DRIVER = "org.postgresql.Driver";
-        String DATABASE_URL = "jdbc:postgresql://localhost:%1$d/geonames".formatted(postgresqlContainer.getFirstMappedPort());
-        Properties properties = new Properties();
-        properties.setProperty("user", postgresqlContainer.getUsername());
-        properties.setProperty("password", postgresqlContainer.getPassword());
-        Class.forName(DATABASE_DRIVER);
-        return DriverManager.getConnection(DATABASE_URL, properties);
+    protected DataSource getDataSource(JdbcDatabaseContainer<?> container) {
+        HikariConfig hikariConfig = new HikariConfig();
+        hikariConfig.setJdbcUrl(container.getJdbcUrl());
+        hikariConfig.setUsername(container.getUsername());
+        hikariConfig.setPassword(container.getPassword());
+        hikariConfig.setDriverClassName(container.getDriverClassName());
+        return new HikariDataSource(hikariConfig);
     }
 
 }
