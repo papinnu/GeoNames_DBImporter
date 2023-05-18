@@ -1,5 +1,5 @@
 #!/bin/sh
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk17
 #
 # Copyright © 2015-2021 the original authors.
 #
