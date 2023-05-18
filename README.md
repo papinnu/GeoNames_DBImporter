@@ -1,7 +1,8 @@
 # GeoNames Database Importer
 
-This tool parse the data provided by <a href="http://download.geonames.org/export/zip/" target="_blank">GeoNames</a>. As result an SQL file
-is produced to able to import it in different DB servers. Supported databases are: MSSQL, MySQL, PostgreSQL and Oracle.
+This tool parse the data provided by <a href="http://download.geonames.org/export/zip/" target="_blank">GeoNames</a>. 
+As result a SQL file  is produced to able to import it in different DB servers. Supported databases are: MSSQL, MySQL, 
+PostgreSQL and Oracle.
 
 The data format is tab-delimited text in utf8 encoding, with the following fields :
 
@@ -39,7 +40,7 @@ INSERT INTO cities (ID, stateId, countyId, communityId, postalCode, name) VALUES
 ```
 The SQL file will create tables with the following structure.
 
-Table States
+### Table States ###
 
 | Name          | Type           | Null  | Extra              |
 | ------------- |:--------------:| -----:| ------------------:|
@@ -47,7 +48,7 @@ Table States
 | code          | varchar(20)    |  NO   |                    |
 | name          | varchar(100)   |  NO   |                    |
 
-Table Counties
+### Table Counties ###
 
 | Name    | Type           | Null  |              Extra |
 |---------|:--------------:| -----:|-------------------:|
@@ -56,7 +57,7 @@ Table Counties
 | code    | varchar(20)    |  NO   |                    |
 | name    | varchar(100)   |  NO   |                    |
 
-Table Communities
+### Table Communities ###
 
 | Name     | Type           | Null  |              Extra |
 |----------|:--------------:| -----:|-------------------:|
@@ -65,7 +66,7 @@ Table Communities
 | code     | varchar(20)    |  NO   |                    |
 | name     | varchar(100)   |  NO   |                    |
 
-Table Cities
+### Table Cities ###
 
 | Name        | Type           | Null |              Extra |
 |-------------|:--------------:|-----:|-------------------:|
@@ -80,7 +81,7 @@ Table Cities
 
 ## SQL Dialects ##
 This application supports various SQL dialects like:
-- Mysql / MariaDB
+- MySQL | MariaDB
 - PostgreSQL 
 - Oracle
 - MS SQL Server
@@ -92,5 +93,5 @@ This application supports various SQL dialects like:
 ```
 where the first argument is the path to the txt file provided by the
 <a href="http://download.geonames.org/export/zip/" target="_blank">GeoNames</a>. 
-The second parameter is the dialect that the generated SQL file will support.
+The second parameter (case-insensitive) is the dialect that the generated SQL file will support.
 
