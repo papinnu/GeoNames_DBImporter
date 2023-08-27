@@ -1,3 +1,4 @@
 org.papi.geonames.dbimporter.impl.MysqlSqlDialect
 org.papi.geonames.dbimporter.impl.PostgreSqlDialect
 org.papi.geonames.dbimporter.impl.OracleSqlDialect
+org.papi.geonames.dbimporter.impl.MsSqlDialect

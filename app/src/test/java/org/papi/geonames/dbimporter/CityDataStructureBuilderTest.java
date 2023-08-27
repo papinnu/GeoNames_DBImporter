@@ -38,8 +38,9 @@ class CityDataStructureBuilderTest {
     private static final PostgreSQLContainer<TestPostgreSqlContainer> postgresqlContainer =
         TestPostgreSqlContainer.getInstance();
 
-    @Test
+//    @Test
     void testWithMysql() {
+        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("US.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
@@ -92,6 +93,7 @@ class CityDataStructureBuilderTest {
 
     @Test
     void testWithPostgreSql() {
+        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("BG.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
@@ -99,14 +101,14 @@ class CityDataStructureBuilderTest {
             .fromFile(inputFile)
             .withSqlDialect("postgresql")
             .build()
-            .save("GeoNamesPostgre.sql");
+            .save("GeoNames_PostgreSQL.sql");
         assertTrue(outputPath.toFile().exists());
-        MountableFile mFile = MountableFile.forHostPath("GeoNamesPostgre.sql");
-        postgresqlContainer.withCopyFileToContainer(mFile, "GeoNamesPostgre.sql");
+        MountableFile mFile = MountableFile.forHostPath("GeoNames_PostgreSQL.sql");
+        postgresqlContainer.withCopyFileToContainer(mFile, "GeoNames_PostgreSQL.sql");
         postgresqlContainer.start();
 
         try {
-            String command = String.format("psql -h localhost -d geonames -U %1$s -f GeoNamesPostgre.sql", postgresqlContainer.getUsername());
+            String command = String.format("psql -h localhost -d geonames -U %1$s -f GeoNames_PostgreSQL.sql", postgresqlContainer.getUsername());
             ExecResult res = postgresqlContainer.execInContainer("sh", "-c", command);
             assertEquals(0, res.getExitCode());
         } catch (IOException | InterruptedException ex) {

@@ -3,7 +3,6 @@ package org.papi.geonames.dbimporter.model;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
-import lombok.ToString;
 import org.papi.geonames.dbimporter.api.PlaceType;
 
 /**
