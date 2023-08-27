@@ -30,7 +30,7 @@ public class OracleSqlDialect extends AbstractSqlDialect {
 
     @Override
     public String getInsertTableQuery(@NonNull PlaceType type, Object... args) {
-        return Utils.normalizeQuery(getInsertTableQuery(type), args);
+        return Utils.normalizeQuery(getInsertTableQueryInternal(type), args);
     }
 
     @Override
