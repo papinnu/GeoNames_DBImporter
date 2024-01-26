@@ -18,7 +18,7 @@ import org.papi.geonames.dbimporter.api.PlaceType;
 import org.papi.geonames.dbimporter.api.SQLDialectEnum;
 import org.papi.geonames.dbimporter.model.City;
 import org.papi.geonames.dbimporter.model.Place;
-import org.papi.geonames.dbimporter.spi.SqlDialect;
+import org.papi.geonames.dbimporter.api.spi.SqlDialect;
 
 /**
  * @author Plamen Uzunov

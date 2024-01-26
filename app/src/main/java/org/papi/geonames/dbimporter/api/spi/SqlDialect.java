@@ -15,4 +15,7 @@ public interface SqlDialect {
 
     String getInsertTableQuery(@NonNull PlaceType type, Object... args);
 
+    String prepareInsertStart(@NonNull String tableName);
+    String prepareInsertEnd(@NonNull String tableName);
+
 }

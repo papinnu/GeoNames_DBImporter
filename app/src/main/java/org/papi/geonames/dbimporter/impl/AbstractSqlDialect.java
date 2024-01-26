@@ -6,7 +6,7 @@ import java.util.Map;
 import lombok.NonNull;
 import org.papi.geonames.dbimporter.api.PlaceType;
 import org.papi.geonames.dbimporter.api.SQLDialectEnum;
-import org.papi.geonames.dbimporter.spi.SqlDialect;
+import org.papi.geonames.dbimporter.api.spi.SqlDialect;
 
 /**
  * @author Plamen Uzunov
