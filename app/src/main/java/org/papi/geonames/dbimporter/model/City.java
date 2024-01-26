@@ -12,11 +12,8 @@ import org.papi.geonames.dbimporter.api.PlaceType;
 @Setter
 public class City extends Place {
 
-    public City(@NonNull PlaceType type, @NonNull String code, @NonNull String name) {
-        super(type, code, name);
+    public City(@NonNull String code, @NonNull String name) {
+        super(PlaceType.CITY, code, name);
     }
-
-    private int stateId;
-    private int countyId;
 
 }

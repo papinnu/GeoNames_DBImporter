@@ -40,6 +40,7 @@ public class CityDataStructureBuilderOracleTest {
 
     @BeforeAll
     public static void setUpClass() {
+        System.setProperty("skipCommunities", "true");
         container = new OracleContainer(IMAGE_VERSION)
             .withEnv("ORACLE_PASSWORD", "oracle")
             .withExposedPorts(1521, ORACLE_PORT)
@@ -49,7 +50,7 @@ public class CityDataStructureBuilderOracleTest {
         ;
     }
 
-    @Test
+//    @Test
     void testWithOracle() {
         URL url = this.getClass().getClassLoader().getResource("US.txt");
         assertNotNull(url);

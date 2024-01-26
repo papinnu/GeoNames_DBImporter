@@ -19,17 +19,20 @@ public class App {
         if (args.length > 1) {
             sqlDialect = args[1];
         }
-        if(args.length > 2) {
-            PlaceType.CITY.setTableName(args[2]);
+        if(args.length > 2 && "skipCommunities".equalsIgnoreCase(args[2])) {
+            System.setProperty("skipCommunities", "true");
         }
         if(args.length > 3) {
-            PlaceType.STATE.setTableName(args[3]);
+            PlaceType.CITY.setTableName(args[3]);
         }
         if(args.length > 4) {
-            PlaceType.COUNTY.setTableName(args[4]);
+            PlaceType.STATE.setTableName(args[4]);
         }
         if(args.length > 5) {
-            PlaceType.COMMUNITY.setTableName(args[5]);
+            PlaceType.COUNTY.setTableName(args[5]);
+        }
+        if(args.length > 6) {
+            PlaceType.COMMUNITY.setTableName(args[6]);
         }
 
         CityDataStructureBuilder.create()
