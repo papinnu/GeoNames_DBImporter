@@ -40,18 +40,23 @@ class CityDataStructureBuilderTest {
 
 //    @Test
     void testWithMysql() {
-        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("US.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
-        Path outputPath = CityDataStructureBuilder.create()
+        Path outputPath = DivisionsDataStructureBuilder.create()
             .fromFile(inputFile)
             .withSqlDialect("mysql")
-            .build()
+            .withCitiesIndex(1)
+            .withCommunitiesIndex(1)
+            .withCountiesIndex(1)
+            .withCountryId(1)
+            .withStatesIndex(1)
+            .buildStructure()
             .save("GeoNamesMySQL.sql");
         assertTrue(outputPath.toFile().exists());
-        MountableFile mFile = MountableFile.forHostPath("GeoNamesMySQL.sql");
-        mysqlContainer.withCopyFileToContainer(mFile, "GeoNamesMySQL.sql");
+        MountableFile mFile = MountableFile.forClasspathResource("GeoNamesMySQL.sql");
+        postgresqlContainer.withCopyFileToContainer(mFile,"/tmp/GeoNamesMySQL.sql");
+
         mysqlContainer.start();
 
         try {
@@ -93,23 +98,36 @@ class CityDataStructureBuilderTest {
 
     @Test
     void testWithPostgreSql() {
-        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("BG.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
-        Path outputPath = CityDataStructureBuilder.create()
+        Path outputPath = DivisionsDataStructureBuilder.create()
             .fromFile(inputFile)
             .withSqlDialect("postgresql")
-            .build()
+            .withCitiesIndex(1)
+            .withCommunitiesIndex(1)
+            .withCountiesIndex(1)
+            .withCountryId(1)
+            .withStatesIndex(1)
+            .buildStructure()
             .save("GeoNames_PostgreSQL.sql");
         assertTrue(outputPath.toFile().exists());
-        MountableFile mFile = MountableFile.forHostPath("GeoNames_PostgreSQL.sql");
-        postgresqlContainer.withCopyFileToContainer(mFile, "GeoNames_PostgreSQL.sql");
+        MountableFile mFile = MountableFile.forClasspathResource("src/test/resources/GeoNames_PostgreSQL.sql");
+        postgresqlContainer.withCopyFileToContainer(mFile,"/tmp/GeoNames_PostgreSQL.sql");
         postgresqlContainer.start();
 
         try {
-            String command = String.format("psql -h localhost -d geonames -U %1$s -f GeoNames_PostgreSQL.sql", postgresqlContainer.getUsername());
+            ExecResult ls = postgresqlContainer.execInContainer("sh", "-c", "pwd && ls -l && ls -l GeoNames_PostgreSQL.sql");
+            System.out.println(ls.getStdout());
+            System.out.println(ls.getStderr());
+
+            String command = String.format("psql-v ON_ERROR_STOP=1 -a -e -h localhost -d geonames -U %s -f GeoNames_PostgreSQL.sql", postgresqlContainer.getUsername());
             ExecResult res = postgresqlContainer.execInContainer("sh", "-c", command);
+
+            System.out.println("EXIT CODE: " + res.getExitCode());
+            System.out.println("STDOUT:\n" + res.getStdout());
+            System.out.println("STDERR:\n" + res.getStderr());
+
             assertEquals(0, res.getExitCode());
         } catch (IOException | InterruptedException ex) {
             Logger.getLogger(CityDataStructureBuilderTest.class.getName()).log(Level.SEVERE, null, ex);

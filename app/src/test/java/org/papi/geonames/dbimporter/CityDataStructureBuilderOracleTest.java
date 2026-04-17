@@ -1,15 +1,11 @@
 package org.papi.geonames.dbimporter;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
-
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,15 +13,18 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import oracle.jdbc.datasource.impl.OracleDataSource;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.Container.ExecResult;
 import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.OracleContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.utility.MountableFile;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * @author Plamen Uzunov
@@ -40,7 +39,6 @@ public class CityDataStructureBuilderOracleTest {
 
     @BeforeAll
     public static void setUpClass() {
-        System.setProperty("skipCommunities", "true");
         container = new OracleContainer(IMAGE_VERSION)
             .withEnv("ORACLE_PASSWORD", "oracle")
             .withExposedPorts(1521, ORACLE_PORT)
@@ -56,10 +54,10 @@ public class CityDataStructureBuilderOracleTest {
         assertNotNull(url);
         assertTrue(Paths.get(url.getFile()).toFile().exists());
         String inputFile = url.getFile();
-        Path outputPath = CityDataStructureBuilder.create()
+        Path outputPath = DivisionsDataStructureBuilder.create()
             .fromFile(inputFile)
             .withSqlDialect("oracle")
-            .build()
+            .buildStructure()
             .save("GeoNamesOracle.sql");
         assertTrue(outputPath.toFile().exists());
         MountableFile mFile = MountableFile.forHostPath("GeoNamesOracle.sql");
@@ -114,15 +112,11 @@ public class CityDataStructureBuilderOracleTest {
     }
 
     protected Connection getConnection(JdbcDatabaseContainer<?> container) throws ClassNotFoundException, SQLException {
-        OracleDataSource dataSource = new OracleDataSource();
-        dataSource.setServerName("localhost");
-        dataSource.setServiceName("XEPDB1");
-        dataSource.setUser(container.getUsername());
-        dataSource.setPassword(container.getPassword());
-        dataSource.setDatabaseName("geonames");
-        dataSource.setPortNumber(container.getFirstMappedPort());
-        dataSource.setDriverType("thin");
-        return dataSource.getConnection();
+        return DriverManager.getConnection(
+            container.getJdbcUrl(),
+            container.getUsername(),
+            container.getPassword()
+        );
     }
 
 }
