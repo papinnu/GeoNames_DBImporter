@@ -1,6 +1,7 @@
 package org.papi.geonames.dbimporter.api;
 
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Plamen Uzunov
@@ -15,7 +16,8 @@ public enum DivisionType {
     CITY("cities", "stateId", "postalCode", "name"),
     ;
 
-    private final String tableName;
+    @Setter
+    private String tableName;
     private final String parentColumn;
     private final String codeColumn;
     private final String nameColumn;
