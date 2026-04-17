@@ -40,23 +40,34 @@ class CityDataStructureBuilderTest {
 
 //    @Test
     void testWithMysql() {
-        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("US.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
-        Path outputPath = CityDataStructureBuilder.create()
+        Path outputPath = DivisionsDataStructureBuilder.create()
             .fromFile(inputFile)
             .withSqlDialect("mysql")
-            .build()
+            .withCitiesIndex(1)
+            .withCommunitiesIndex(1)
+            .withCountiesIndex(1)
+            .withCountryId(1)
+            .withStatesIndex(1)
+            .buildStructure()
             .save("GeoNamesMySQL.sql");
         assertTrue(outputPath.toFile().exists());
-        MountableFile mFile = MountableFile.forHostPath("GeoNamesMySQL.sql");
-        mysqlContainer.withCopyFileToContainer(mFile, "GeoNamesMySQL.sql");
+        String fileName = outputPath.getFileName().toString();
+        String mountedFile = "/tmp/" + fileName;
+        MountableFile mFile = MountableFile.forHostPath(fileName);
+        mysqlContainer.withCopyFileToContainer(mFile,mountedFile);
+
         mysqlContainer.start();
 
         try {
-            String command = "mysql -u%1$s -p%2$s geonames < GeoNamesMySQL.sql"
-                .formatted(mysqlContainer.getUsername(), mysqlContainer.getPassword());
+            ExecResult ls = mysqlContainer.execInContainer("sh", "-c", "pwd && ls -l && ls -l " + mountedFile);
+            System.out.println(ls.getStdout());
+            System.out.println(ls.getStderr());
+
+            String command = "mysql -u%1$s -p%2$s geonames < %3$s"
+                .formatted(mysqlContainer.getUsername(), mysqlContainer.getPassword(), mountedFile);
             ExecResult res = mysqlContainer.execInContainer("sh", "-c", command);
             assertEquals(0, res.getExitCode());
         } catch (IOException | InterruptedException ex) {
@@ -93,23 +104,39 @@ class CityDataStructureBuilderTest {
 
     @Test
     void testWithPostgreSql() {
-        System.setProperty("skipCommunities", "true");
         URL url = this.getClass().getClassLoader().getResource("BG.txt");
         assertNotNull(url);
         String inputFile = url.getFile();
-        Path outputPath = CityDataStructureBuilder.create()
+        Path outputPath = DivisionsDataStructureBuilder.create()
             .fromFile(inputFile)
             .withSqlDialect("postgresql")
-            .build()
+            .withCitiesIndex(1)
+            .withCommunitiesIndex(1)
+            .withCountiesIndex(1)
+            .withCountryId(1)
+            .withStatesIndex(1)
+            .buildStructure()
             .save("GeoNames_PostgreSQL.sql");
         assertTrue(outputPath.toFile().exists());
-        MountableFile mFile = MountableFile.forHostPath("GeoNames_PostgreSQL.sql");
-        postgresqlContainer.withCopyFileToContainer(mFile, "GeoNames_PostgreSQL.sql");
+        String fileName = outputPath.getFileName().toString();
+        String mountedFile = "/tmp/" + fileName;
+        MountableFile mFile = MountableFile.forHostPath(fileName);
+        postgresqlContainer.withCopyFileToContainer(mFile, mountedFile);
         postgresqlContainer.start();
 
         try {
-            String command = String.format("psql -h localhost -d geonames -U %1$s -f GeoNames_PostgreSQL.sql", postgresqlContainer.getUsername());
+            ExecResult ls = postgresqlContainer.execInContainer("sh", "-c", "pwd && ls -l && ls -l " + mountedFile);
+            System.out.println(ls.getStdout());
+            System.out.println(ls.getStderr());
+
+            String command = String.format("psql -a -e -h localhost -d geonames -U %1$s -f %2$s", postgresqlContainer.getUsername(), mountedFile);
+            System.out.println("COMMAND: " + command);
             ExecResult res = postgresqlContainer.execInContainer("sh", "-c", command);
+
+            System.out.println("EXIT CODE: " + res.getExitCode());
+            System.out.println("STDOUT:\n" + res.getStdout());
+            System.out.println("STDERR:\n" + res.getStderr());
+
             assertEquals(0, res.getExitCode());
         } catch (IOException | InterruptedException ex) {
             Logger.getLogger(CityDataStructureBuilderTest.class.getName()).log(Level.SEVERE, null, ex);
@@ -118,7 +145,7 @@ class CityDataStructureBuilderTest {
 
         // Test PostgreSql imported data
         try (Connection conn = getConnection(postgresqlContainer)) {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT COUNT(*) FROM states WHERE code=?");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT COUNT(*) FROM public.states WHERE code=?");
             pstmt.setString(1, "BGS");
             ResultSet res = pstmt.executeQuery();
             if (res.next()) {

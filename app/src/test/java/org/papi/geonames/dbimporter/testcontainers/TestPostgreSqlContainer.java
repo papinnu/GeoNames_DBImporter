@@ -5,7 +5,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 //@Testcontainers
 public class TestPostgreSqlContainer extends PostgreSQLContainer<TestPostgreSqlContainer> {
     public static final String IMAGE_VERSION = "postgres";
-    public static final int POSTGRES_PORT = 54321;
+    public static final int POSTGRES_PORT = 54322;
     private static TestPostgreSqlContainer container;
 
     private TestPostgreSqlContainer(String dockerImageName) {
@@ -20,12 +20,12 @@ public class TestPostgreSqlContainer extends PostgreSQLContainer<TestPostgreSqlC
     public static TestPostgreSqlContainer getInstance() {
         if (container == null) {
             container = new TestPostgreSqlContainer(IMAGE_VERSION)
-                .withExposedPorts(5432, POSTGRES_PORT)
                 .withDatabaseName("geonames")
                 .withUsername("test")
                 .withPassword("1234567890")
                 .withEnv("PGPASSWORD", "1234567890")
             ;
+            container.addFixedExposedPort(POSTGRES_PORT, 5432);
         }
 
         return container;

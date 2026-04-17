@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.NonNull;
-import org.papi.geonames.dbimporter.api.PlaceType;
+import org.papi.geonames.dbimporter.api.DivisionType;
 import org.papi.geonames.dbimporter.api.SQLDialectEnum;
 import org.papi.geonames.dbimporter.api.spi.SqlDialect;
 
@@ -19,24 +19,21 @@ public abstract class AbstractSqlDialect implements SqlDialect {
         this.type = type;
     }
 
-    protected final Map<PlaceType, String> createTableQueries = new HashMap<>(2);
-    protected final Map<PlaceType, String> insertTableQueries = new HashMap<>(2);
+    protected final Map<DivisionType, String> createTableQueries = new HashMap<>(2);
+    protected final Map<DivisionType, String> insertTableQueries = new HashMap<>(2);
 
     protected abstract String getDefaultCreateQuery();
 
     protected abstract String getDefaultInsertQuery();
 
     @Override
-    public String getCreateTableQuery(@NonNull PlaceType type, @NonNull Object... args) {
-        String skip = System.getProperty("skipCommunities");
-        return (PlaceType.CITY == type && skip != null && !skip.isBlank())
-            ? getDefaultCreateQuery().formatted(args)
-            : getCreateTableQuery(type).formatted(args);
+    public String getCreateTableQuery(@NonNull DivisionType type, @NonNull Object... args) {
+        return getCreateTableQuery(type).formatted(args);
     }
 
     @Override
-    public String getInsertTableQuery(@NonNull PlaceType type, Object... args) {
-        return getInsertTableQueryInternal(type).formatted(args);
+    public String getInsertTableQuery(@NonNull DivisionType type, Object... args) {
+        return getInsertTableQuery(type).formatted(args);
     }
 
     @Override
@@ -54,34 +51,21 @@ public abstract class AbstractSqlDialect implements SqlDialect {
         return "";
     }
 
-    protected String getInsertTableQueryInternal(@NonNull PlaceType type) {
-        String skip = System.getProperty("skipCommunities");
-        return (PlaceType.CITY == type && skip != null && !skip.isBlank())
-            ? getDefaultInsertQuery()
-            : getInsertTableQuery(type);
-    }
-
-    protected void addCreateTableQuery(@NonNull PlaceType type, @NonNull String query) {
+    protected void addCreateTableQuery(@NonNull DivisionType type, @NonNull String query) {
         createTableQueries.put(type, query);
     }
 
-    protected void addInsertTableQuery(@NonNull PlaceType type, @NonNull String query) {
+    protected void addInsertTableQuery(@NonNull DivisionType type, @NonNull String query) {
         insertTableQueries.put(type, query);
     }
 
-    protected String getInsertTableQuery(@NonNull PlaceType type) {
+    protected String getInsertTableQuery(@NonNull DivisionType type) {
         String query = insertTableQueries.get(type);
-        if (query == null) {
-            query = getDefaultInsertQuery();
-        }
-        return query;
+        return (query == null) ? getDefaultInsertQuery() : query;
     }
 
-    protected String getCreateTableQuery(@NonNull PlaceType type) {
+    protected String getCreateTableQuery(@NonNull DivisionType type) {
         String query = createTableQueries.get(type);
-        if (query == null) {
-            query = getDefaultCreateQuery();
-        }
-        return query;
+        return (query == null) ? getDefaultCreateQuery() : query;
     }
 }

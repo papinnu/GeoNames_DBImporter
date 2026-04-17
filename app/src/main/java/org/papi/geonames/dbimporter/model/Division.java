@@ -5,24 +5,24 @@ import java.util.Objects;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
-import org.papi.geonames.dbimporter.api.PlaceType;
+import org.papi.geonames.dbimporter.api.DivisionType;
 
 /**
  * @author Plamen Uzunov
  */
 @Getter
 @Setter
-public class Place {
+public class Division {
 
-    private final PlaceType type;
+    private final DivisionType type;
     private final String code;
     private final String name;
-    private Place parent;
+    private Division parent;
     private int Id;
 
-    public Place(@NonNull PlaceType type, @NonNull String code, @NonNull String name) {
+    public Division(@NonNull DivisionType type, @NonNull String code, @NonNull String name) {
         if (code.isBlank() || name.isBlank()) {
-            throw new IllegalArgumentException("Code and name place cannot be blank!");
+            throw new IllegalArgumentException(String.format("Code and name place cannot be blank for %s!", type.name()));
         }
         this.code = code;
         this.name = name;
@@ -33,7 +33,7 @@ public class Place {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Place place = (Place) o;
+        Division place = (Division) o;
         return type == place.type && code.equals(place.code) && name.equals(place.name);
     }
 
