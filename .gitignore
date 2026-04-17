@@ -21,3 +21,6 @@
 
 # Custom
 **/bin/
+/commands.txt
+/app/BG_GeoNames_PostgreSQL.sql
+/exports/

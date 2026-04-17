@@ -1,7 +1,7 @@
 package org.papi.geonames.dbimporter.api.spi;
 
 import lombok.NonNull;
-import org.papi.geonames.dbimporter.api.PlaceType;
+import org.papi.geonames.dbimporter.api.DivisionType;
 import org.papi.geonames.dbimporter.api.SQLDialectEnum;
 
 /**
@@ -11,9 +11,9 @@ public interface SqlDialect {
 
     SQLDialectEnum getType();
 
-    String getCreateTableQuery(@NonNull PlaceType type, @NonNull Object... args);
+    String getCreateTableQuery(@NonNull DivisionType type, @NonNull Object... args);
 
-    String getInsertTableQuery(@NonNull PlaceType type, Object... args);
+    String getInsertTableQuery(@NonNull DivisionType type, Object... args);
 
     String prepareInsertStart(@NonNull String tableName);
     String prepareInsertEnd(@NonNull String tableName);

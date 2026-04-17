@@ -1,6 +1,8 @@
 package org.papi.geonames.dbimporter;
 
-import org.papi.geonames.dbimporter.api.PlaceType;
+import java.util.Scanner;
+
+import org.papi.geonames.dbimporter.api.DivisionType;
 
 public class App {
 
@@ -19,27 +21,69 @@ public class App {
         if (args.length > 1) {
             sqlDialect = args[1];
         }
-        if(args.length > 2 && "skipCommunities".equalsIgnoreCase(args[2])) {
-            System.setProperty("skipCommunities", "true");
-        }
-        if(args.length > 3) {
-            PlaceType.CITY.setTableName(args[3]);
-        }
-        if(args.length > 4) {
-            PlaceType.STATE.setTableName(args[4]);
-        }
-        if(args.length > 5) {
-            PlaceType.COUNTY.setTableName(args[5]);
-        }
-        if(args.length > 6) {
-            PlaceType.COMMUNITY.setTableName(args[6]);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the country ID");
+        int countryId = Integer.parseInt(scanner.nextLine());
+
+        // Prompt the user to use custom table name
+        System.out.println("Do you want to customize table names? N/y");
+        String customize = scanner.nextLine();
+        boolean toCustomize = false;
+        if (customize != null) {
+            String trimed = customize.trim();
+            toCustomize = trimed.length() == 1 && "Y".equalsIgnoreCase(trimed);
         }
 
-        CityDataStructureBuilder.create()
+        if (toCustomize) {
+            System.out.println("Enter the cities table name:");
+            DivisionType.CITY.setTableName(scanner.nextLine());
+
+            System.out.println("Enter the counties table name:");
+            DivisionType.COUNTY.setTableName(scanner.nextLine());
+
+            System.out.println("Enter the communities table name:");
+            DivisionType.COMMUNITY.setTableName(scanner.nextLine());
+
+            System.out.println("Enter the states table name:");
+            DivisionType.STATE.setTableName(scanner.nextLine());
+        }
+
+        System.out.println("Do you want to customize the starting sequence of table indexes? N/y");
+        String customizeSequenceIndexes = scanner.nextLine();
+        boolean customSequence = false;
+        if (customizeSequenceIndexes != null) {
+            String trimed = customizeSequenceIndexes.trim();
+            customSequence = trimed.length() == 1 && "Y".equalsIgnoreCase(trimed);
+        }
+        int citiesStartIndex = 1;
+        int communitiesStartIndex = 1;
+        int countiesStartIndex = 1;
+        int statesStartIndex = 1;
+        if (customSequence) {
+            System.out.printf("Enter the starting index sequence for the %1$s table:%n", DivisionType.CITY.getTableName());
+            citiesStartIndex = scanner.nextInt();
+
+            System.out.printf("Enter the starting index sequence for the %1$s table:%n", DivisionType.COMMUNITY.getTableName());
+            communitiesStartIndex = scanner.nextInt();
+
+            System.out.printf("Enter the starting index sequence for the %1$s table:%n", DivisionType.COUNTY.getTableName());
+            countiesStartIndex = scanner.nextInt();
+
+            System.out.printf("Enter the starting index sequence for the %1$s table:%n", DivisionType.STATE.getTableName());
+            statesStartIndex = scanner.nextInt();
+        }
+
+        DivisionsDataStructureBuilder.create()
             .fromFile(file)
             .withSqlDialect(sqlDialect)
-            .build()
-            .save("GeoNames.sql");
+            .withCountryId(countryId)
+            .withCitiesIndex(citiesStartIndex)
+            .withCommunitiesIndex(communitiesStartIndex)
+            .withCountiesIndex(countiesStartIndex)
+            .withStatesIndex(statesStartIndex)
+            .buildStructure()
+            .save(sqlDialect + ".sql");
     }
 
 }
